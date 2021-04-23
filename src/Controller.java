@@ -11,6 +11,8 @@ public class Controller {
 
     public void login() {}
 
+    public void updateView() {}
+
     public void setReservationId(int id) {
         reservationModel.setId(id);
     }
@@ -41,10 +43,5 @@ public class Controller {
 
     public LocalDate getReservationEndDate() {
         return reservationModel.getEndDate();
-    }
-
-    public void updateView() {
-        reservationView.printReservationDetails(reservationModel.getId(), reservationModel.getPrice(),
-                reservationModel.getStartDate(), reservationModel.getEndDate());
     }
 }

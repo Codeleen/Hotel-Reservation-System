@@ -1,8 +1,7 @@
 import java.time.LocalDate;
 
 public class ReservationView {
-    public void printReservationDetails(int id, double price, LocalDate beginningDate, LocalDate endDate) {
-    }
+    public void printReservationDetails(int id, double price, LocalDate beginningDate, LocalDate endDate) {}
 
     public void showLoginPage() {}
 

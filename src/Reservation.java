@@ -29,6 +29,10 @@ public class Reservation {
         this.price = price;
     }
 
+    public double calculatePrice(LocalDate startDate, LocalDate endDate) {
+        return 0.0;
+    }
+
     public LocalDate getStartDate() {
         return startDate;
     }

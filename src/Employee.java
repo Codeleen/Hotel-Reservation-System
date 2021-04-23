@@ -8,6 +8,4 @@ public class Employee extends Account {
     public void createEmployee(String name, String username, String password) {}
 
     public void deleteEmployee(String employeeUsername) {}
-
-    public void searchById(int reservationId) {}
 }
