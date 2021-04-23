@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
-public class ReservationMVCPattern {
+public class Controller {
     private Reservation reservationModel;
     private ReservationView reservationView;
 
-    public ReservationMVCPattern(Reservation reservationModel, ReservationView reservationView) {
+    public Controller(Reservation reservationModel, ReservationView reservationView) {
         this.reservationModel = reservationModel;
         this.reservationView = reservationView;
     }
