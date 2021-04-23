@@ -6,6 +6,13 @@ public class Reservation {
     private LocalDate startDate;
     private LocalDate endDate;
 
+    public Reservation(int id, double price, LocalDate startDate, LocalDate endDate) {
+        this.id = id;
+        this.price = price;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
     public int getId() {
         return id;
     }

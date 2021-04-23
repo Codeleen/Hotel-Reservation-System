@@ -1,19 +1,13 @@
 public class Employee extends Account {
-    private int id;
-
     public Employee(String name, String username, String password) {
         super(name, username, password);
     }
 
-    public void loginAsCustomer(int customerId) {
+    public void loginAsCustomer(String customerUsername) {}
 
-    }
+    public void createEmployee(String name, String username, String password) {}
 
-    public void createEmployee(String name, String username, String password) {
+    public void deleteEmployee(String employeeUsername) {}
 
-    }
-
-    public void deleteEmployee(int id) {
-
-    }
+    public void searchById(int reservationId) {}
 }

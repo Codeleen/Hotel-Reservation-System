@@ -1,7 +1,10 @@
+import java.time.LocalDate;
+
 public class Account {
     private String username;
     private String password;
     private String name;
+    private boolean isLoggedIn;
 
     public Account(String name, String username, String password) {
         this.name = name;
@@ -14,4 +17,12 @@ public class Account {
     public String getName() {
         return name;
     }
+
+    public void setIsLoggedIn(boolean isLoggedIn) {
+        this.isLoggedIn = isLoggedIn;
+    }
+
+    public void searchByDate(LocalDate startDate, LocalDate endDate) {}
+
+    public void searchByPrice(double lowPrice, double highPrice) {}
 }

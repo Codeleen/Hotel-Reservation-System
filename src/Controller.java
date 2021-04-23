@@ -9,6 +9,8 @@ public class Controller {
         this.reservationView = reservationView;
     }
 
+    public void login() {}
+
     public void setReservationId(int id) {
         reservationModel.setId(id);
     }

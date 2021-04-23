@@ -1,25 +1,16 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Customer extends Account {
-    private int id;
+    private ArrayList<Reservation> reservations;
 
     public Customer(String name, String username, String password) {
         super(name, username, password);
     }
 
-    public int getId() {
-        return id;
-    }
+    public void createReservation(LocalDate startDate, LocalDate endDate) {}
 
-    public void createReservation(LocalDate startDate, LocalDate endDate) {
+    public void viewReservation(int reservationId) {}
 
-    }
-
-    public void viewReservation(int reservationId) {
-
-    }
-
-    public void deleteReservation(int reservationId) {
-
-    }
+    public void deleteReservation(int reservationId) {}
 }
