@@ -7,7 +7,14 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Tests the Customer model class
+ */
 public class CustomerTest {
+    /**
+     * Tests if cancelReservation() works by creating a reservation, then
+     * cancelling it
+     */
     @Test
     public void testCancelReservation() {
         Customer customer = new Customer("Tom", "Tom123", "password");
