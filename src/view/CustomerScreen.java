@@ -63,7 +63,7 @@ public class CustomerScreen extends JFrame {
         add(titleContainer);
         add(buttons);
 
-        setTitle("Customer Screen");
+        setTitle("Hotel Reservation System");
         setVisible(true);
         setResizable(false);
         pack();

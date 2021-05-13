@@ -54,6 +54,7 @@ public class CustomerViewReservationScreen extends JFrame {
         listPanel.setSize(200, 200);
         add(listPanel);
 
+        setTitle("View/Cancel Reservation");
         setVisible(true);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
