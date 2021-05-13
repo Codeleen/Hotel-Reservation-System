@@ -8,13 +8,13 @@ import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Defines the screen an employee will see
+ * Defines the screen an employee will see.
  */
 public class EmployeeScreen extends JFrame {
     /**
-     * Constructor for EmployeeScreen, creates text fields for employee to login as customer
-     * @param queue the queue of messages for controller to handle
-     * @param size the size used for scaling components
+     * Constructor for EmployeeScreen, creates text fields for employee to login as customer.
+     * @param queue the queue of messages for controller to handle.
+     * @param size the size used for scaling components.
      */
     public EmployeeScreen(BlockingQueue<Message> queue, int size) {
         JFrame frame = this;

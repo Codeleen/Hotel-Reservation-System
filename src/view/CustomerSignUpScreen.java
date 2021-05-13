@@ -8,14 +8,14 @@ import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Defines the screen the user will see when trying to create a customer account
+ * Defines the screen the user will see when trying to create a customer account.
  */
 public class CustomerSignUpScreen extends JFrame {
     /**
      * Constructor for CustomerSignUpScreen, creates text fields for signing up for a
-     * customer account
-     * @param queue the queue of messages for controller to handle
-     * @param size the size used for scaling components
+     * customer account.
+     * @param queue the queue of messages for controller to handle.
+     * @param size the size used for scaling components.
      */
     public CustomerSignUpScreen(BlockingQueue<Message> queue, int size) {
         setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));

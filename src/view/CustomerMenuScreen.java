@@ -1,6 +1,7 @@
 package view;
 
 import controller.Message;
+import controller.ViewReservationListMessage;
 import model.Customer;
 
 import javax.swing.*;
@@ -8,17 +9,18 @@ import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Defines the screen the user will see after successfully logging in as a customer
+ * Defines the screen the user will see after successfully logging in as a customer.
  */
 public class CustomerMenuScreen extends JFrame {
     /**
      * Constructor for CustomerMenuScreen, creates buttons for user to create a reservation
-     * or view/cancel his or her reservation(s)
-     * @param queue the queue of messages for controller to handle
-     * @param size the size used for scaling components
-     * @param customer the particular customer that is logged-in
+     * or view/cancel his or her reservation(s).
+     * @param queue the queue of messages for controller to handle.
+     * @param size the size used for scaling components.
+     * @param customer the particular customer that is logged-in.
      */
     public CustomerMenuScreen(BlockingQueue<Message> queue, int size, Customer customer) {
+        JFrame frame = this;
         setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
         Font largeFont = new Font("SansSerif", Font.PLAIN, size / 30);
 
@@ -39,8 +41,12 @@ public class CustomerMenuScreen extends JFrame {
 
         JButton viewReservationButton = new JButton("View / Cancel reservation");
         viewReservationButton.addActionListener(e -> {
-            dispose();
-            new CustomerViewReservationScreen(queue, size, customer);
+            try {
+                Message message = new ViewReservationListMessage(frame, queue, size, customer);
+                queue.put(message);
+            } catch(InterruptedException exception) {
+                //do nothing
+            }
         });
         viewReservationButton.setPreferredSize(new Dimension(size / 2, size / 6));
         viewReservationButton.setFont(largeFont);

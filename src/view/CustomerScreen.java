@@ -6,13 +6,13 @@ import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Defines the screen the user will see after choosing to view the application as a customer
+ * Defines the screen the user will see after choosing to view the application as a customer.
  */
 public class CustomerScreen extends JFrame {
     /**
-     * Constructor for CustomerScreen, creates buttons to login or signup for an account
-     * @param queue the queue of messages for controller to handle
-     * @param size the size used for scaling components
+     * Constructor for CustomerScreen, creates buttons to login or signup for an account.
+     * @param queue the queue of messages for controller to handle.
+     * @param size the size used for scaling components.
      */
     public CustomerScreen(BlockingQueue<Message> queue, int size) {
         setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));

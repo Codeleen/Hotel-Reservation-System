@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * Tests the HotelSystem model class
+ * Tests the HotelSystem class.
  */
 public class HotelSystemTest {
     /**
      * Tests if addCustomer() works by seeing if the customers hashmap afterwards is equal to a
-     * different instance of the same data structure after the same addition
+     * different instance of the same data structure after the same addition.
      */
     @Test
     public void testAddCustomer() {
@@ -30,7 +30,7 @@ public class HotelSystemTest {
 
     /**
      * Tests if addCustomer() throws an exception when trying to add a customer with a username that
-     * is already being used
+     * is already being used.
      */
     @Test
     public void testAddCustomerException() {
@@ -47,7 +47,7 @@ public class HotelSystemTest {
 
     /**
      * Tests if getCustomer() works by creating a customer, adding it, then retrieving it and checking
-     * if it is equal to the original
+     * if it is equal to the original.
      */
     @Test
     public void testGetCustomer() {

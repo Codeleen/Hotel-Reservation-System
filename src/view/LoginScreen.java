@@ -7,14 +7,14 @@ import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Defines the initial screen all users will see
+ * Defines the initial screen all users will see.
  */
 public class LoginScreen extends JFrame {
     /**
      * Constructor for LoginScreen, creates two buttons, one for employee and the
-     * other for customer
-     * @param queue the queue of messages for controller to handle
-     * @param size the size used for scaling components
+     * other for customer.
+     * @param queue the queue of messages for controller to handle.
+     * @param size the size used for scaling components.
      */
     public LoginScreen(BlockingQueue<Message> queue, int size) {
         Font largeFont = new Font("Serif", Font.PLAIN, size / 5);

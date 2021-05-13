@@ -1,6 +1,6 @@
 import model.Customer;
 import model.DatePeriod;
-import model.Reservation;
+import model.NormalReservation;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -8,12 +8,11 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Tests the Customer model class
+ * Tests the Customer class.
  */
 public class CustomerTest {
     /**
-     * Tests if cancelReservation() works by creating a reservation, then
-     * cancelling it
+     * Tests if cancelReservation() works by creating a reservation, then cancelling it.
      */
     @Test
     public void testCancelReservation() {
@@ -21,7 +20,7 @@ public class CustomerTest {
         LocalDate start = LocalDate.of(2021, 1, 1);
         LocalDate end = LocalDate.of(2021, 1, 15);
         DatePeriod datePeriod = new DatePeriod(start, end);
-        customer.addReservation(new Reservation("1", datePeriod));
+        customer.addReservation(new NormalReservation("1", datePeriod));
 
         customer.cancelReservation(0);
         assertTrue(customer.getReservations().isEmpty(),

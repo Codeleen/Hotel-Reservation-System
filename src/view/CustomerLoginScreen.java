@@ -8,13 +8,13 @@ import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Defines the screen the user will see when logging in as a customer
+ * Defines the screen the user will see when logging in as a customer.
  */
 public class CustomerLoginScreen extends JFrame {
     /**
-     * Constructor for CustomerLoginScreen, creates fields for customer to use to login
-     * @param queue the queue of messages for controller to handle
-     * @param size the size of used for scaling components
+     * Constructor for CustomerLoginScreen, creates fields for customer to use to login.
+     * @param queue the queue of messages for controller to handle.
+     * @param size the size of used for scaling components.
      */
     public CustomerLoginScreen(BlockingQueue<Message> queue, int size) {
         JFrame frame = this;

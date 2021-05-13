@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Sent when a customer attempts to login
+ * Sent when a customer attempts to login.
  */
 public class LoginCustomerMessage implements Message {
     private JFrame frame;
@@ -14,12 +14,12 @@ public class LoginCustomerMessage implements Message {
     private String password;
 
     /**
-     * Constructor for LoginCustomerMessage
-     * @param frame the frame of the current view
-     * @param queue the queue of messages
-     * @param size the size of the frame
-     * @param username the customer's username
-     * @param password the customer's password
+     * Constructor for LoginCustomerMessage.
+     * @param frame the frame of the current view.
+     * @param queue the queue of messages.
+     * @param size the size used for scaling components.
+     * @param username the customer's username.
+     * @param password the customer's password.
      */
     public LoginCustomerMessage(JFrame frame, BlockingQueue<Message> queue, int size, String username, String password) {
         this.frame = frame;
@@ -30,40 +30,40 @@ public class LoginCustomerMessage implements Message {
     }
 
     /**
-     * Getter for the frame of the view
-     * @return the frame
+     * Getter for the frame of the view.
+     * @return the frame.
      */
     public JFrame getFrame() {
         return frame;
     }
 
     /**
-     * Getter for the queue of messages
-     * @return the queue
+     * Getter for the queue of messages.
+     * @return the queue.
      */
     public BlockingQueue<Message> getQueue() {
         return queue;
     }
 
     /**
-     * Getter for the size of the frame
-     * @return the size
+     * Getter for the size for scaling.
+     * @return the size.
      */
     public int getSize() {
         return size;
     }
 
     /**
-     * Getter for the customer's username
-     * @return the username
+     * Getter for the customer's username.
+     * @return the username.
      */
     public String getUsername() {
         return username;
     }
 
     /**
-     * Getter for the customer's password
-     * @return the password
+     * Getter for the customer's password.
+     * @return the password.
      */
     public String getPassword() {
         return password;

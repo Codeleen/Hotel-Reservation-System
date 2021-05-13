@@ -7,7 +7,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Starts the whole application, making the necessary beginning steps
+ * Starts the whole application, making the necessary beginning steps.
  */
 public class App {
     public static void main(String[] args) {

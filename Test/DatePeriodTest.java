@@ -6,12 +6,12 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * Tests the DatePeriod class
+ * Tests the DatePeriod class.
  */
 public class DatePeriodTest {
     /**
      * Tests if the DatePeriod constructor throws an exception when calling it with a startDate that is
-     * after the endDate
+     * after the endDate.
      */
     @Test
     public void testDatePeriodConstructor() {

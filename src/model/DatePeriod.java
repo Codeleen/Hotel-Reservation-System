@@ -2,6 +2,9 @@ package model;
 
 import java.time.LocalDate;
 
+/**
+ * A class modeling the period of time a reservation is for.
+ */
 public class DatePeriod {
     LocalDate start;
     LocalDate end;

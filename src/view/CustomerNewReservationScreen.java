@@ -9,15 +9,15 @@ import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Defines the screen the user will see when creating a new reservation as a customer
+ * Defines the screen the user will see when creating a new reservation as a customer.
  */
 public class CustomerNewReservationScreen extends JFrame {
     /**
      * Constructor for CustomerNewReservation, creates fields for the customer to fill out to
-     * create a new reservation
-     * @param queue the queue of messages for controller to handle
-     * @param size the size used for scaling components
-     * @param customer the particular customer that is logged-in
+     * create a new reservation.
+     * @param queue the queue of messages for controller to handle.
+     * @param size the size used for scaling components.
+     * @param customer the particular customer that is logged-in.
      */
     public CustomerNewReservationScreen(BlockingQueue<Message> queue, int size, Customer customer) {
         JFrame frame = this;
@@ -27,7 +27,7 @@ public class CustomerNewReservationScreen extends JFrame {
         JLabel title = new JLabel("New Reservation");
 
         JPanel newReservationPanel = new JPanel();
-        newReservationPanel.setLayout(new GridLayout(3, 2));
+        newReservationPanel.setLayout(new GridLayout(4, 2));
 
         JLabel roomLabel = new JLabel("Room:");
         JTextField roomTextField = new JTextField(16);
@@ -36,12 +36,19 @@ public class CustomerNewReservationScreen extends JFrame {
         JLabel endDateLabel = new JLabel("End Date:");
         JTextField endDateTextField = new JTextField(16);
 
+        JPanel checkboxes = new JPanel(new FlowLayout());
+        JCheckBox discountCheckbox = new JCheckBox("Discounted");
+        JCheckBox luxuryCheckbox = new JCheckBox("Luxury Amenities");
+        checkboxes.add(discountCheckbox);
+        checkboxes.add(luxuryCheckbox);
+
         newReservationPanel.add(roomLabel);
         newReservationPanel.add(roomTextField);
         newReservationPanel.add(startDateLabel);
         newReservationPanel.add(startDateTextField);
         newReservationPanel.add(endDateLabel);
         newReservationPanel.add(endDateTextField);
+        newReservationPanel.add(checkboxes);
 
         JButton newReservationButton = new JButton("Confirm");
         newReservationButton.addActionListener(e -> {
@@ -50,9 +57,12 @@ public class CustomerNewReservationScreen extends JFrame {
             String endDate = endDateTextField.getText();
 
             if (!room.isEmpty() && !startDate.isEmpty() && !endDate.isEmpty()) {
+                boolean discounted = discountCheckbox.isSelected();
+                boolean hasLuxury = luxuryCheckbox.isSelected();
+
                 try {
                     Message message = new CreateNewReservationMessage(frame, queue, size, customer, room,
-                            startDate, endDate);
+                            startDate, endDate, discounted, hasLuxury);
                     queue.put(message);
                 } catch (InterruptedException exception) {
                     //do nothing
@@ -69,15 +79,16 @@ public class CustomerNewReservationScreen extends JFrame {
             new CustomerMenuScreen(queue, size, customer);
         });
 
-        this.add(title, BorderLayout.NORTH);
-        this.add(newReservationPanel, BorderLayout.CENTER);
-        this.add(newReservationButton, BorderLayout.SOUTH);
-        this.add(backButton, BorderLayout.SOUTH);
+        add(title, BorderLayout.NORTH);
+        add(newReservationPanel, BorderLayout.CENTER);
+        add(newReservationButton, BorderLayout.SOUTH);
+        add(backButton, BorderLayout.SOUTH);
 
-        this.setResizable(true);
-        this.setVisible(true);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.pack();
-        this.setSize(400, 300);
+        setVisible(true);
+        setResizable(false);
+        pack();
+        setLocationRelativeTo(null);
+        setSize(600, 400);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
